@@ -1,0 +1,127 @@
+Discusion de resultados:
+Ejercicio 1:
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    int numero1, numero2;
+    Scanner teclado = new Scanner(System.in);
+
+    System.out.print("Ingrese dos numeros enteros\n");
+    System.out.print("Numero 1: ");
+    numero1 = teclado.nextInt();
+    System.out.print("Numero 2: ");
+    numero2 = teclado.nextInt();
+
+    if(numero1 % numero2 == 0){
+      System.out.print("Los numeros "+numero1+" y "+numero2+ " son divisibles entre si");
+    }else{
+      System.out.print("Los numeros "+numero1+" y "+numero2+ " no son divisibles entre si");
+    }
+  }
+}
+
+Ejercicio 2:
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    System.out.print("Sistema de notas\n");
+
+    float[] Notas = new float[10];
+    int contador1 = 0, contador2 = 0, j=1;
+    
+    Scanner teclado = new Scanner(System.in);
+
+    System.out.print("Ingresando las notas de los 10 alumnos\n");
+
+    for(int i=0; i<10; i++){
+      System.out.print("Nota alumno "+j+" :");
+      Notas[i] = teclado.nextFloat();
+      if(Notas[i]>=7){
+        contador1 = contador1+1;
+      }else{
+        contador2 = contador2+1;
+      }
+      j++;
+    }
+
+    System.out.print(contador1 + " Alumnos tienen notas iguales o mayores a 7\n");
+    System.out.print(contador2 + " Alumnos tienen notas menores a 7");
+  }
+}
+
+Ejercicio 3:
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    int cantidad, impar=0, par=0, contador=1;
+    int [] numeros;
+    Scanner teclado = new Scanner(System.in);
+
+    System.out.print("Cuantos numeros ingresara? ");
+    cantidad = teclado.nextInt();
+    numeros = new int[cantidad];
+    
+    for(int i = 0; i<cantidad; i++){
+      System.out.print("Numero "+contador+" :");
+      numeros[i] = teclado.nextInt();
+      if(numeros[i]%2 == 0){
+        par++;
+      }else{
+        impar++;
+      }
+      contador++;
+    }
+  
+    System.out.print(par+" Son numeros pares\n");
+    System.out.print(impar+" Son numeros impares\n");
+  }
+}
+
+Ejercicio 4:
+import java.util.*;
+
+class Main {
+  public static void main(String[] args) {
+    float [] x;
+    float [] y;
+    int cantidad, eje=0, primer=0, segundo=0, tercer=0,contador=1, cuarto=0;
+    Scanner teclado = new Scanner(System.in);
+
+    System.out.println("Ingrese la cantidad de puntos a procesar:");
+    cantidad = teclado.nextInt();
+    x = new float[cantidad];
+    y = new float[cantidad];
+
+    for(int i=0; i<cantidad; i++){
+     System.out.print("X"+contador+" : ");
+     x[i] = teclado.nextFloat();
+     System.out.print("Y"+contador+" : ");
+     y[i] = teclado.nextFloat(); 
+     System.out.print("\n");
+
+     contador++;
+
+     if(x[i]==0 && y[i]==0){
+       eje++;
+     }else if(x[i]>0 && y[i]>0){
+       primer++;
+     }else if(x[i]<0 && y[i]>0){
+       segundo++;
+     }else if(x[i]<0 && y[i]<0){
+       tercer++;
+     }else if(x[i]>0 && y[i]<0){
+       cuarto++;
+     }
+    }
+
+    System.out.println("Puntos por cuadrante:");
+    System.out.println(eje+" En el eje");
+    System.out.println(primer+" En el primer cuadrante");
+    System.out.println(segundo+" En el segundo cuadrante");
+    System.out.println(tercer+" En el tercer cuadrante");
+    System.out.println(cuarto+" En el cuarto cuadrante");
+  }
+}
