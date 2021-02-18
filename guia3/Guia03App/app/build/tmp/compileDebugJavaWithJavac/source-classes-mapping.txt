@@ -1,6 +1,0 @@
-sv/udb/edu/guia03app/MainActivity.java
- sv.udb.edu.guia03app.MainActivity
-sv/udb/edu/guia03app/BuildConfig.java
- sv.udb.edu.guia03app.BuildConfig
-sv/udb/edu/guia03app/MyLifeCycleObserver.java
- sv.udb.edu.guia03app.MyLifeCycleObserver

@@ -1,7 +1,0 @@
-sv/udb/edu/complementario/BuildConfig.java
- sv.udb.edu.complementario.BuildConfig
-sv/udb/edu/complementario/MainActivity.java
- sv.udb.edu.complementario.MainActivity
- sv.udb.edu.complementario.MainActivity$1
-sv/udb/edu/complementario/SumaViewModel.java
- sv.udb.edu.complementario.SumaViewModel
