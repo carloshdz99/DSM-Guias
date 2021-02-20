@@ -1,0 +1,4 @@
+#Fri Feb 19 22:59:41 CST 2021
+base.0=C\:\\Users\\carlo\\Documents\\DSM\\Guias\\EjercicioLab\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

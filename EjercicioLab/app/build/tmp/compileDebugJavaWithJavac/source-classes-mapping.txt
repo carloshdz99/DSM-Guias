@@ -1,0 +1,7 @@
+sv/udb/edu/ejerciciolab/BuildConfig.java
+ sv.udb.edu.ejerciciolab.BuildConfig
+sv/udb/edu/ejerciciolab/DatosOperario.java
+ sv.udb.edu.ejerciciolab.DatosOperario
+sv/udb/edu/ejerciciolab/MainActivity.java
+ sv.udb.edu.ejerciciolab.MainActivity
+ sv.udb.edu.ejerciciolab.MainActivity$1
