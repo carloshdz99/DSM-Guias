@@ -49,7 +49,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="43dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned"
         app:layout_constraintStart_toEndOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -73,7 +73,7 @@
         android:layout_marginTop="63dp"
         android:layout_marginBottom="60dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned"
         app:layout_constraintBottom_toTopOf="@+id/numberC"
         app:layout_constraintStart_toEndOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/numberA" />
@@ -82,11 +82,11 @@
         android:id="@+id/numberC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="39dp"
-        android:layout_marginLeft="39dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:inputType="numberSigned"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/numberB" />
 
@@ -94,9 +94,9 @@
         android:id="@+id/btncalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="159dp"
-        android:layout_marginLeft="159dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="116dp"
         android:text="Calcular"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numberC" />
@@ -107,7 +107,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="63dp"
         android:layout_marginLeft="63dp"
-        android:layout_marginTop="191dp"
+        android:layout_marginTop="240dp"
         android:layout_marginEnd="78dp"
         android:layout_marginRight="78dp"
         android:text="Resultados:"
