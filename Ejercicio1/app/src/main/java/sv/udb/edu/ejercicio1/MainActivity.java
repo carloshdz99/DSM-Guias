@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
                 double nb = Double.parseDouble(b.getText().toString());
                 double nc = Double.parseDouble(c.getText().toString());
 
-                double xpositivo = (nb*(-1) + Math.sqrt(Math.pow(nb,2) - 4*na*nc)) / (2*na);
-                double xnegativo = (nb*(1) + Math.sqrt(Math.pow(nb,2) - 4*na*nc)) / (2*na);
+                double xpositivo = ((-1)*nb + (-1)*Math.sqrt(Math.pow(nb,2) - 4*na*nc)) / (2*na);
+                double xnegativo = ((-1)*nb + Math.sqrt(Math.pow(nb,2) - 4*na*nc)) / (2*na);
                 txtrespuesta.setText(String.valueOf(xpositivo));
                 txtrespuesta2.setText(String.valueOf(xnegativo));
             }
