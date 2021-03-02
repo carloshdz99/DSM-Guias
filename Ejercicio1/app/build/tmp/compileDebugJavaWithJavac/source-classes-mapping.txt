@@ -1,5 +1,0 @@
-sv/udb/edu/ejercicio1/BuildConfig.java
- sv.udb.edu.ejercicio1.BuildConfig
-sv/udb/edu/ejercicio1/MainActivity.java
- sv.udb.edu.ejercicio1.MainActivity
- sv.udb.edu.ejercicio1.MainActivity$1
