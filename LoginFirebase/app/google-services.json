@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "896414077133",
+    "project_id": "dsm-androidfirebase",
+    "storage_bucket": "dsm-androidfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896414077133:android:f3fc71a497185861f89984",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.guia07app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896414077133-tto77ataiop1ctad1u7du7r431dmkrr8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZje9n0T52QDPB9KYYYL9gVOmq51vVMOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896414077133-tto77ataiop1ctad1u7du7r431dmkrr8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
