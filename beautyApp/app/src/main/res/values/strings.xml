@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">beautyApp</string>
+    <string name="btn_login">Ingresar</string>
+    <string name="btn_regis">Registrarse</string>
+    <string name="titulo_1">Perfeccionando tu Belleza</string>
+    <string name="edt_usuario">Usuario</string>
+    <string name="edt_contraseña">Contraseña</string>
+    <string name="text_nocuenta">No tienes cuenta? Registrate</string>
+</resources>

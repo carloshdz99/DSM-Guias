@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">guia07</string>
+    <string name="facebook_app_id">524821445554573</string> <string name="fb_login_protocol_scheme">fb524821445554573</string>
 </resources>

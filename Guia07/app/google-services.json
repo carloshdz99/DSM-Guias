@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "833090468615-e8fmt3ufj9i11aavq9e62stes1a91rae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.guia07",
+            "certificate_hash": "75cb932ca6067629706853c73be8d4ec952f230c"
+          }
+        },
+        {
           "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
           "client_type": 3
         }
