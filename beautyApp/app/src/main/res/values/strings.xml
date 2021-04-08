@@ -6,4 +6,5 @@
     <string name="edt_usuario">Usuario</string>
     <string name="edt_contraseña">Contraseña</string>
     <string name="text_nocuenta">No tienes cuenta? Registrate</string>
+    <string name="edt_contraseña_2">Confirmar Contraseña</string>
 </resources>
