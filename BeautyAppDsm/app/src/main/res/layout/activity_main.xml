@@ -37,7 +37,7 @@
         app:srcCompat="@drawable/beauty" />
 
     <EditText
-        android:id="@+id/edtUsuario"
+        android:id="@+id/edtRegisUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -54,7 +54,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/edtContraseña"
+        android:id="@+id/edtRegisContraseña"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -68,7 +68,7 @@
         android:backgroundTint="@color/secondaryBrown"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisUsuario" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -77,11 +77,12 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/btn_login"
         android:background="@drawable/button_style"
+        android:text="@string/btn_login"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtContraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/edtRegisContraseña" />
 
     <Button
         android:id="@+id/btnRegistro"
@@ -90,9 +91,11 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:text="@string/text_nocuenta"
-        android:textColor="@color/secondaryBrown"
         android:background="@drawable/button_rounded"
+        android:text="@string/text_nocuenta"
+        android:textAllCaps="false"
+        android:textColor="@color/secondaryBrown"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
