@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -17,8 +19,9 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class Registro extends AppCompatActivity {
 
+    private static final String TAG = "Firebase";
     private Button btnIngresar, btnRegistrarse;
-    private EditText edtUsuario, edtContraseña, edtContraseña2;
+    private EditText edtUsuario, edtContraseña;
 
     private FirebaseAuth mAuth;
 
@@ -27,6 +30,9 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
         getSupportActionBar().hide();
+
+        //iniciando firebase
+        mAuth = FirebaseAuth.getInstance();
 
         //iniciando variables
         init();
@@ -51,13 +57,21 @@ public class Registro extends AppCompatActivity {
 
     //metodo de registro con firebase
     private void RegisterEmailandPassword(){
-        String usuario, contraseña1, contraseña2;
+        String usuario, contraseña;
         usuario = edtUsuario.getText().toString();
-        contraseña1 = edtContraseña.getText().toString();
-        contraseña2 = edtContraseña2.getText().toString();
+        contraseña = edtContraseña.getText().toString();
 
-        if (contraseña1 == contraseña2){
-            mAuth.createUserWithEmailAndPassword(usuario, contraseña1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+        if (TextUtils.isEmpty(usuario)){
+            Toast.makeText(getApplicationContext(), "Por favor ingrese su correo", Toast.LENGTH_LONG).show();
+            return;
+        }
+        if(TextUtils.isEmpty(contraseña)){
+            Toast.makeText(getApplicationContext(), "Por favor ingrese su contraseña", Toast.LENGTH_LONG).show();
+            return;
+        }
+
+            mAuth.createUserWithEmailAndPassword(usuario, contraseña).
+                    addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()){
@@ -66,21 +80,19 @@ public class Registro extends AppCompatActivity {
                         startActivity(i);
                     }else {
                         Toast.makeText(getApplicationContext(), "No fue posible crearse la cuenta", Toast.LENGTH_LONG).show();
+                        Log.w(TAG, "createUserWithEmail:failure", task.getException());
                     }
                 }
             });
-        }else {
-            Toast.makeText(getApplicationContext(), "Las contraseñas no coinciden", Toast.LENGTH_LONG).show();
-        }
+
     }
 
     //inicializando variables
     private void init(){
         btnIngresar = findViewById(R.id.btnIngresar);
-        btnRegistrarse = findViewById(R.id.btnRegistro);
+        btnRegistrarse = findViewById(R.id.btnRegistrarse);
 
         edtContraseña = findViewById(R.id.edtRegisContraseña);
-        edtContraseña2 = findViewById(R.id.edtRegisContraseña2);
         edtUsuario = findViewById(R.id.edtRegisUsuario);
     }
 }
