@@ -18,9 +18,7 @@ import com.beautyapp.R;
 
 public class HomeFragment extends Fragment {
 
-
     private HomeViewModel homeViewModel;
-    private Button btnprueba;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -37,13 +35,6 @@ public class HomeFragment extends Fragment {
 
 
         //root es la variable que es tomando la vista y todos sus elementos
-        btnprueba = root.findViewById(R.id.btnPrueba);
-        btnprueba.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Prueba de boton en el fragmento",Toast.LENGTH_LONG).show();
-            }
-        });
 
         return root;
 
