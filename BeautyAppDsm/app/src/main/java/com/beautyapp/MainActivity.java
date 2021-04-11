@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -75,7 +76,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
+
+                    String correo = task.getResult().getUser().getEmail();
                     Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+                    i.putExtra("correoUsuario", correo);
                     startActivity(i);
                 }else {
                     Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show();
@@ -91,5 +95,15 @@ public class MainActivity extends AppCompatActivity {
 
         edtusuario = findViewById(R.id.edtRegisUsuario);
         edtContraseña = findViewById(R.id.edtRegisContraseña);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        if (currentUser != null){
+            Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+            startActivity(i);
+        }
     }
 }
