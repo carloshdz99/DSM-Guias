@@ -5,6 +5,7 @@
     android:id="@+id/date"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="#EBE2E1"
     tools:context=".ui.home.HomeFragment">
 
@@ -166,3 +167,7 @@
         app:layout_constraintTop_toBottomOf="@+id/divider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+=======
+    tools:context=".ui.home.HomeFragment"
+    android:background="@color/primaryPink"/>
+>>>>>>> 234d7161aee18c45db65402b0dd1d684dfc55231
