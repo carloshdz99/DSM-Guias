@@ -28,13 +28,10 @@ import java.util.List;
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private HomeViewModel homeViewModel;
-<<<<<<< HEAD
     private ListView lista;
     private TextView servicio, precio, date;
     private Button btnfecha;
     private int dia, mes, anio;
-=======
->>>>>>> 234d7161aee18c45db65402b0dd1d684dfc55231
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,7 +43,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         precio = root.findViewById(R.id.txtprecio);
 
         //root es la variable que es tomando la vista y todos sus elementos
-<<<<<<< HEAD
         lista = root.findViewById(R.id.list);
         ArrayAdapter<CharSequence> adaptador = ArrayAdapter.createFromResource(getContext(),
                 R.array.arrayTratamientos,
@@ -100,8 +96,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 }
             }
         });
-=======
->>>>>>> 234d7161aee18c45db65402b0dd1d684dfc55231
 
         date = root.findViewById(R.id.fecha);
         btnfecha = root.findViewById(R.id.btnfecha);
