@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="arrayTratamientos">
+        <item>Tratamiento Facial</item>
+        <item>Tratamiento Corporal</item>
+        <item>Tratamiento con Keratina</item>
+        <item>Keratina Anti-Frizz</item>
+        <item>Hidratación</item>
+        <item>Regenerante</item>
+        <item>Botox Capilar</item>
+        <item>Tratamiento de Barros</item>
+        <item>Dermabrasion (exfoliante)</item>
+        <item>Plex Forte (medicina capilar)</item>
+    </string-array>
+</resources>
