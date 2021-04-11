@@ -1,5 +1,6 @@
 package com.beautyapp.ui.home;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -20,27 +22,23 @@ import androidx.lifecycle.ViewModelProvider;
 import com.beautyapp.MainActivity;
 import com.beautyapp.R;
 
+import java.util.Calendar;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
 
     private HomeViewModel homeViewModel;
     private ListView lista;
-    private TextView servicio, precio;
+    private TextView servicio, precio, date;
+    private Button btnfecha;
+    private int dia, mes, anio;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-       /* final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });*/
 
         servicio = root.findViewById(R.id.txtservicio);
         precio = root.findViewById(R.id.txtprecio);
@@ -100,7 +98,31 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        date = root.findViewById(R.id.fecha);
+        btnfecha = root.findViewById(R.id.btnfecha);
+
+        btnfecha.setOnClickListener(this);
+
         return root;
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v==btnfecha){
+            final Calendar c = Calendar.getInstance();
+
+            dia = c.get(Calendar.DAY_OF_MONTH);
+            mes = c.get(Calendar.MONTH);
+            anio = c.get(Calendar.YEAR);
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(getContext(), new DatePickerDialog.OnDateSetListener() {
+                @Override
+                public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                    date.setText(dayOfMonth+"/"+(month + 1)+"/"+year);
+                }
+            }, dia, mes, anio);
+            datePickerDialog.show();
+        }
     }
 }
