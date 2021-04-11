@@ -79,10 +79,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()){
-
-                    String correo = task.getResult().getUser().getEmail();
                     Intent i = new Intent(MainActivity.this, DashboardActivity.class);
-                    i.putExtra("correoUsuario", correo);
                     startActivity(i);
                 }else {
                     Toast.makeText(getApplicationContext(), "Usuario o contraseña incorrectos", Toast.LENGTH_LONG).show();

@@ -21,6 +21,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.beautyapp.MainActivity;
 import com.beautyapp.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Calendar;
 import java.util.List;
@@ -101,10 +103,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         btnfecha = root.findViewById(R.id.btnfecha);
 
         btnfecha.setOnClickListener(this);
-
         return root;
 
     }
+
 
     @Override
     public void onClick(View v) {
