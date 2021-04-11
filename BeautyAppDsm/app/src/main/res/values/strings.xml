@@ -8,12 +8,15 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Cerrar Sesion</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Casa</string>
+    <string name="menu_agenda">Agenda</string>
+    <string name="menu_history">Historial</string>
 
     <string name="btn_login">Ingresar</string>
     <string name="btn_regis">Registrarse</string>
+    <string name="btn_fecha">Fecha</string>
+    <string name="btn_cita">Agendar cita</string>
+
     <string name="titulo_1">Perfeccionando tu Belleza</string>
     <string name="edt_usuario">Usuario</string>
     <string name="edt_contraseña">Contraseña</string>
@@ -21,5 +24,14 @@
     <string name="edt_contraseña_2">Confirmar Contraseña</string>
 
     <string name="img_descripcion">Mano</string>
+
+    <string name="hFecha">Fecha</string>
+    <string name="hTratamiento">Tratamiento</string>
+    <string name="historial_citas">Historial de citas</string>
+    <string name="tratamiento_realizado">Tratamiento realizado</string>
+
+    <string name="t1_cita">Cita</string>
+    <string name="t1_servicios">Servicios</string>
+
 
 </resources>

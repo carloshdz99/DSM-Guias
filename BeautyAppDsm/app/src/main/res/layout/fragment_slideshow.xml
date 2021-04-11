@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="81dp"
-        android:text="Fecha"
+        android:text="@string/hFecha"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider7" />
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="11dp"
         android:layout_marginEnd="81dp"
-        android:text="Fecha"
+        android:text="@string/hFecha"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView18" />
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="81dp"
-        android:text="Fecha"
+        android:text="@string/hFecha"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView19" />
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="81dp"
-        android:text="Fecha"
+        android:text="@string/hFecha"
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20" />
@@ -57,7 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="11dp"
-        android:text="Tratamiento"
+        android:text="@string/hTratamiento"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider7" />
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="11dp"
-        android:text="Tratamiento"
+        android:text="@string/hTratamiento"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView14" />
@@ -79,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="15dp"
-        android:text="Tratamiento"
+        android:text="@string/hTratamiento"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView15" />
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="81dp"
         android:layout_marginTop="14dp"
-        android:text="Tratamiento"
+        android:text="@string/hTratamiento"
         android:textAlignment="viewStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
@@ -123,7 +123,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="188dp"
         android:fontFamily="@font/dancing_script"
-        android:text="Hisorial de Citas"
+        android:text="@string/historial_citas"
         android:textAlignment="center"
         android:textColor="#59122C"
         android:textSize="24sp"
@@ -139,7 +139,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:fontFamily="@font/dancing_script"
-        android:text="Tratamiento Realizado"
+        android:text="@string/tratamiento_realizado"
         android:textAlignment="viewStart"
         android:textColor="#59122C"
         android:textSize="18sp"
