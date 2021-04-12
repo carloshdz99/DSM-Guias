@@ -19,6 +19,7 @@ import com.beautyapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -29,9 +30,9 @@ public class SlideshowFragment extends Fragment {
 
     private SlideshowViewModel slideshowViewModel;
 
-    private ListView listView;
-    private ArrayList<String> arrayList;
-    private ArrayAdapter<String> arrayAdapter;
+    private ListView listView, listViewfechas;
+    private ArrayList<String> arrayList, arrayListfecha;
+    private ArrayAdapter<String> arrayAdapter, arrayAdapterfechas;
 
     private FirebaseAuth mAuth;
 
@@ -43,14 +44,14 @@ public class SlideshowFragment extends Fragment {
 
         //tomando lista
         arrayList = new ArrayList<String>();
-
-
+        arrayListfecha = new ArrayList<String>();
 
         //instanciando firebase
         mAuth = FirebaseAuth.getInstance();
 
         //tomando la listview
         listView = root.findViewById(R.id.ltsCitas);
+        listViewfechas = root.findViewById(R.id.ltsFechas);
 
         //adaptador de arreglo
        // arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, arrayList);
@@ -65,9 +66,12 @@ public class SlideshowFragment extends Fragment {
 
 
     private void getCitas(){
+        //.whereEqualTo("Correo", userEmail)
+        FirebaseUser user = mAuth.getCurrentUser();
+        String userEmail = user.getEmail();
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         //tomando las citas
-        db.collection("citas")
+        db.collection("Citas").whereEqualTo("Correo", userEmail)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     private static final String TAG ="firestore" ;
@@ -76,10 +80,14 @@ public class SlideshowFragment extends Fragment {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                Log.d(TAG, document.getId() + " => " + document.getData());
-                                arrayList.add(document.getData().toString());
+                                Log.d(TAG, document.getId() + " => " + document.getData().get("Servicio"));
+                                arrayList.add(document.getData().get("Servicio").toString());
                                 arrayAdapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, arrayList);
                                 listView.setAdapter(arrayAdapter);
+
+                                arrayListfecha.add(document.getData().get("Fecha").toString());
+                                arrayAdapterfechas = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, arrayListfecha);
+                                listViewfechas.setAdapter(arrayAdapterfechas);
                             }
                         }else {
                             Log.w(TAG, "error al llamar los datos ", task.getException());
