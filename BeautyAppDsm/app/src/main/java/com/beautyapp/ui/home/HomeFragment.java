@@ -2,6 +2,7 @@ package com.beautyapp.ui.home;
 
 import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,28 +22,42 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.beautyapp.MainActivity;
 import com.beautyapp.R;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import static android.content.ContentValues.TAG;
+
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
+    private FirebaseAuth mAuth;
     private HomeViewModel homeViewModel;
     private ListView lista;
     private TextView servicio, precio, date;
-    private Button btnfecha;
+    private Button btnfecha, btnCita;
     private int dia, mes, anio;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+
         homeViewModel =
                 new ViewModelProvider(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         servicio = root.findViewById(R.id.txtservicio);
         precio = root.findViewById(R.id.txtprecio);
+        date = root.findViewById(R.id.fecha);
 
         //root es la variable que es tomando la vista y todos sus elementos
         lista = root.findViewById(R.id.list);
@@ -103,6 +118,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         btnfecha = root.findViewById(R.id.btnfecha);
 
         btnfecha.setOnClickListener(this);
+        btnCita = root.findViewById(R.id.btnCita);
+        btnCita.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Agendar();
+            }
+        });
+
         return root;
 
     }
@@ -125,5 +148,56 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             }, dia, mes, anio);
             datePickerDialog.show();
         }
+
+
+    }
+
+    public void Agendar(){
+               mAuth = FirebaseAuth.getInstance();
+               FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+               String ser = servicio.getText().toString();
+               String pre = precio.getText().toString();
+               String fec = date.getText().toString();
+               String us = mAuth.getCurrentUser().getEmail().toString();
+
+        Map<String, Object> cita = new HashMap<>();
+        cita.put("Correo", us);
+        cita.put("Servicio", ser);
+        cita.put("Precio", pre);
+        cita.put("Fecha", fec);
+
+        db.collection("Citas").document()
+                .set(cita)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "DocumentSnapshot successfully written!");
+                        Toast toast = Toast.makeText(getContext(), "Registro exitoso" , Toast.LENGTH_LONG);
+                        toast.show();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error writing document", e);
+                    }
+                });
+
+      /*  db.collection("Citas")
+                .add(cita)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error adding document", e);
+                    }
+                });*/
     }
 }
