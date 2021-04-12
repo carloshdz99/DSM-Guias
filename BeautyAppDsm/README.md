@@ -10,3 +10,7 @@
 ### Diseños figma
 
 [Figma](https://www.figma.com/file/0fGbc1TC6mPDDRi9vLeKeV/Segundo-Desaf%C3%ADo-Practico-DSM?node-id=0%3A1)
+
+### Icono de la aplicacion
+
+![beauty](beauty.jpeg)
