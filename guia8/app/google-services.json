@@ -1,0 +1,164 @@
+{
+  "project_info": {
+    "project_number": "833090468615",
+    "firebase_url": "https://logindsm-cf8c6-default-rtdb.firebaseio.com",
+    "project_id": "logindsm-cf8c6",
+    "storage_bucket": "logindsm-cf8c6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833090468615:android:122696819e54250bd1a3a2",
+        "android_client_info": {
+          "package_name": "com.beautyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRnbZKbFBDMuS0afhchVJ3JGa0Xre5NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833090468615:android:47120c89097a6a2ad1a3a2",
+        "android_client_info": {
+          "package_name": "sv.beautyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRnbZKbFBDMuS0afhchVJ3JGa0Xre5NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833090468615:android:76ae6da3027bdbfad1a3a2",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.guia07"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833090468615-e8fmt3ufj9i11aavq9e62stes1a91rae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "sv.edu.udb.guia07",
+            "certificate_hash": "75cb932ca6067629706853c73be8d4ec952f230c"
+          }
+        },
+        {
+          "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRnbZKbFBDMuS0afhchVJ3JGa0Xre5NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833090468615:android:30581cd70b111c50d1a3a2",
+        "android_client_info": {
+          "package_name": "sv.edu.udb.guia8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRnbZKbFBDMuS0afhchVJ3JGa0Xre5NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:833090468615:android:06ad41dfc6355c60d1a3a2",
+        "android_client_info": {
+          "package_name": "sv.udb.guia8"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARRnbZKbFBDMuS0afhchVJ3JGa0Xre5NM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "833090468615-mlv786h4btgigsnqav5733ifpv62m13f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
